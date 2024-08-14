@@ -9,11 +9,11 @@
             padding: 10px;
             background-color: #121212; /* Koyu arka plan rengi */
             color: #e0e0e0; /* Açık metin rengi */
-            width: 250px; /* Popup genişliği */
+            width: 300px; /* Popup genişliği */
         }
         #partList {
             margin-top: 10px;
-            max-height: 200px;
+            max-height: 150px;
             overflow-y: auto;
             background-color: #1e1e1e; /* Koyu arka plan rengi */
             border: 1px solid #333; /* Sınır rengi */
@@ -37,7 +37,7 @@
             color: #e0e0e0; /* Açık metin rengi */
             border: 1px solid #333; /* Sınır rengi */
             padding: 5px;
-            width: 150px; /* Text box genişliği */
+            width: 200px; /* Text box genişliği */
         }
         button {
             background-color: #4caf50; /* Buton arka plan rengi */
@@ -54,6 +54,11 @@
             margin-top: 0;
             margin-bottom: 10px; /* Başlık ile diğer elemanlar arasında boşluk */
         }
+        #partListHeader {
+            margin-top: 20px; /* Başlık ile listedeki öğeler arasındaki boşluk */
+            margin-bottom: 10px; /* Başlık ile diğer elemanlar arasındaki boşluk */
+            font-weight: 700; /* Başlık kalın yazı tipi */
+        }
     </style>
 </head>
 <body>
@@ -62,6 +67,7 @@
         <input type="text" id="partNumberInput" placeholder="Enter part number">
         <button id="addPartButton">Add Part</button>
     </div>
+    <div id="partListHeader">Total Items: 0</div> <!-- Eklenen toplam sayıyı gösterecek başlık -->
     <ul id="partList"></ul>
     <script src="popup.js"></script>
 </body>

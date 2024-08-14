@@ -16,29 +16,29 @@ function applyColorBasedOnStock() {
                     if (stockElement) {
                         const stockNumber = parseInt(stockElement.textContent.trim(), 10);
 
-                        if (stockNumber <= 10) {
+                        if (stockNumber <= 5) {
                             
                             const requiredNumber = 10 - stockNumber;
-
+                            
                             
                             const tdElements = parentRow.querySelectorAll('td');
                             if (tdElements.length >= 7) {
                                 
-                                tdElements[6].textContent = requiredNumber;
+                                tdElements[6].textContent = "SIPARIS";
                             }
                         }
 
                         
                         const parentTd = stockElement.closest('td');
-                        if (stockNumber <= 5) {
+                        if (stockNumber <= 5) { //kırmızı
                             parentTd.style.backgroundColor = "#F08080";
                             parentTd.style.color = "white"; 
                             stockElement.style.color = "black";
-                        } else if (stockNumber >= 6 && stockNumber <= 10) {
+                        } else if (stockNumber >= 6 && stockNumber < 10) { //sarı
                             parentTd.style.backgroundColor = "#f7f7a1";
                             parentTd.style.color = "white";
                             stockElement.style.color = "black";
-                        } else if (stockNumber > 10) {
+                        } else if (stockNumber >= 10) { //yesil
                             parentTd.style.backgroundColor = "#85e0b3";
                             parentTd.style.color = "white";
                             stockElement.style.color = "black";

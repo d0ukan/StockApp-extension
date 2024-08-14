@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "HOYTEK Stock Ext",
+  "version": "1.0",
+  "description": "Change the color of card numbers based on their value.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

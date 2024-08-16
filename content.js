@@ -30,11 +30,11 @@ function applyColorBasedOnStock() {
 
                         
                         const parentTd = stockElement.closest('td');
-                        if (stockNumber <= 5) { //kırmızı
+                        if (stockNumber < 5) { //kırmızı
                             parentTd.style.backgroundColor = "#F08080";
                             parentTd.style.color = "white"; 
                             stockElement.style.color = "black";
-                        } else if (stockNumber >= 6 && stockNumber < 10) { //sarı
+                        } else if (stockNumber >= 5 && stockNumber < 10) { //sarı
                             parentTd.style.backgroundColor = "#f7f7a1";
                             parentTd.style.color = "white";
                             stockElement.style.color = "black";
